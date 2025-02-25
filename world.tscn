@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://4r8adgmglrhy"]
+[gd_scene load_steps=6 format=3 uid="uid://4r8adgmglrhy"]
 
 [ext_resource type="Texture2D" uid="uid://cr74t1x76ft7e" path="res://assets/background.png" id="1_g3406"]
 [ext_resource type="PackedScene" uid="uid://bw7r6v6xspn4g" path="res://ground.tscn" id="1_rrgq0"]
 [ext_resource type="PackedScene" uid="uid://bb6mj67m0dk4j" path="res://box.tscn" id="2_6x70m"]
 [ext_resource type="PackedScene" uid="uid://dktrdfshnon78" path="res://player.tscn" id="3_28rbv"]
+[ext_resource type="AudioStream" uid="uid://0symstn41pho" path="res://assets/music.ogg" id="5_7d0r7"]
 
 [node name="World" type="Node2D"]
 
@@ -32,3 +33,7 @@ position = Vector2(656, 357)
 
 [node name="Box5" parent="." instance=ExtResource("2_6x70m")]
 position = Vector2(562, 445)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_7d0r7")
+autoplay = true
